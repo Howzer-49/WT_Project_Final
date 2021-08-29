@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#navbar {
+  overflow: hidden;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 5px;
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+  left: 20%;
+  top: 10px;
+  text-indent: 10px;
+}
+
+#navbar a:hover {
+  color: rgb(88, 168, 88) ;
+}
+
+.topnav-right {
+  float: right;
+  position: relative;
+  right: 10px;
+  bottom: 5px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div id="navbar">
+  <a  href="home">HOME</a>
+  <a href="test">CUSTOM RIG</a>
+  <a href="test1">DEVICE</a>
+  <a href="test1">FUN FACT</a>
+  <a href="test1">QNA</a>
+  <a href="test1">Contact</a>
+  <div class="topnav-right">
+    <a href="log"><img src="./images/bot.gif" alt="Computer man" style="width:40px;"></a>
+    <a href="yt"><img src="./images/streaming.gif" alt="Computer man" style="width:40px;"></a>
+    <a href="reg"><img src="./images/ticket.png" alt="Computer man" style="width:40px;"></a>
+  </div>
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
